@@ -1,0 +1,45 @@
+{
+  "name": "vx-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "clean": "rimraf .parcel-cache dist",
+    "prebuild": "npm run clean",
+    "postbuild": "copyfiles CNAME img/meta-banner.png test_models/* dist/",
+    "format": "prettier --config .prettierrc --write ./**/*.{html,js,json,css}",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "node ./prepare.js",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{html,js,json,css}": [
+      "prettier  --config .prettierrc --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanleynguyen/vx-viewer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stanleynguyen/vx-viewer/issues"
+  },
+  "homepage": "https://github.com/stanleynguyen/vx-viewer#readme",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.5",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "@parcel/packager-raw-url": "^2.0.1",
+    "@parcel/transformer-webmanifest": "^2.0.1",
+    "copyfiles": "^2.4.1",
+    "parcel": "^2.0.1",
+    "rimraf": "^3.0.2"
+  }
+}

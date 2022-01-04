@@ -1,0 +1,22 @@
+<head>
+  <script type="module" src="model-viewer.js"></script>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+<body></body>
+<script>
+  const rexNumber = window.location.hash
+    ? window.location.hash.replace('#', '')
+    : '6';
+  document.querySelector('body').innerHTML = `
+    <model-viewer
+      style="width: 100vw; height: 100vh"
+      src="./test_models/${rexNumber}.gltf"
+      camera-controls
+      orientation="0deg 0deg 210deg"
+      shadow-intensity="1"
+    />`;
+</script>
