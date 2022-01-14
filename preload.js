@@ -22,7 +22,7 @@ document.querySelector('body').style.backgroundColor =
 document.querySelector('#viewer').innerHTML = `
     <model-viewer
       style="width: 100vw; height: 100vh"
-      src="./test_models/${rexNumber}.gltf"
+      src="https://storage.googleapis.com/cryptotrexnft/vxgltf/${rexNumber}.gltf"
       camera-controls
       orientation="0deg 0deg 210deg"
       shadow-intensity="1"
