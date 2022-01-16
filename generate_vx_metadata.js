@@ -55,6 +55,7 @@ const rawMetadataFiles = fs.readdirSync('./metadata_raw').sort();
       }
       return v;
     });
+    attributes.push({ trait_type: 'Type', value: 'Genesis' });
     const metadata = {
       image: `https://storage.googleapis.com/cryptotrexnft/vxpreviews/${
         i + 1
