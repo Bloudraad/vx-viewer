@@ -107,3 +107,5 @@ previews_*/
 metadata_output/
 metadata_raw/
 .DS_Store
+cypress/
+gltf/

@@ -12,7 +12,8 @@
     "format": "prettier --config .prettierrc --write ./**/*.{html,js,json,css}",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "node ./prepare.js",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "cypress:open": "cypress open --project ./"
   },
   "lint-staged": {
     "*.{html,js,json,css}": [
@@ -31,6 +32,7 @@
   },
   "homepage": "https://github.com/stanleynguyen/vx-viewer#readme",
   "devDependencies": {
+    "cypress": "^9.2.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.5",
     "prettier": "^2.5.1",
