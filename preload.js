@@ -24,6 +24,7 @@ document.querySelector('#viewer').innerHTML = `
       style="width: 100vw; height: 100vh"
       src="https://storage.googleapis.com/cryptotrexnft/vxgltf/${rexNumber}.gltf"
       camera-controls
+      autoplay
       orientation="0deg 0deg 150deg"
       shadow-intensity="1"
     />`;
